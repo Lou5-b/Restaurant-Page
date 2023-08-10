@@ -1,3 +1,7 @@
+import _ from 'lodash';
+import displaymenu from './menu.js';
+
+
 // Your CSS as text
 var styles = `
 body {
@@ -71,6 +75,7 @@ document.head.appendChild(styleSheet)
 
 //HTML
 
+
 //header
 const content = document.querySelector("#content")
 
@@ -93,16 +98,18 @@ list.classList.add("tabs")
 header.appendChild(list)
 const tab1 = document.createElement("li")
 list.appendChild(tab1)
-tab1.innerText = "Order Online"
+tab1.innerText = "Menu"
+tab1.addEventListener('click', function(e) {
+    content.innerHTML = '';
+    displaymenu();
+
+})
 const tab2 = document.createElement("li")
 list.appendChild(tab2)
-tab2.innerText = "Directions"
+tab2.innerText = "Contact"
 const tab3 = document.createElement("li")
 list.appendChild(tab3)
-tab3.innerText = "Call"
-const tab4 = document.createElement("li")
-list.appendChild(tab4)
-tab4.innerText = "Email"
+tab3.innerText = "Our Mission"
 
 //Restaurant Picture
 const imgcontainer = document.createElement("div")
