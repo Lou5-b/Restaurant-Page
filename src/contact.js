@@ -1,5 +1,6 @@
 import displayHome from './index.js';
 import displaymenu from './menu.js';
+import displayMission from './ourmission.js';
 
 export default function displayContact() {
         // Your CSS as text
@@ -137,6 +138,11 @@ export default function displayContact() {
     const tab3 = document.createElement("li")
     list.appendChild(tab3)
     tab3.innerText = "Our Mission"
+    tab3.addEventListener('click', function(e) {
+        content.innerHTML = '';
+        displayMission();
+    
+    })
 
     //Contact Info
     const contactcontainer = document.createElement("div")

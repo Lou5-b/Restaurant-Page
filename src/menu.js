@@ -1,5 +1,6 @@
 import displayHome from './index.js';
 import displayContact from './contact.js';
+import displayMission from './ourmission.js';
 
 export default function displaymenu() {
 
@@ -159,6 +160,11 @@ export default function displaymenu() {
     const tab3 = document.createElement("li")
     list.appendChild(tab3)
     tab3.innerText = "Our Mission"
+    tab3.addEventListener('click', function(e) {
+        content.innerHTML = '';
+        displayMission();
+    
+    })
 
     //Body
 

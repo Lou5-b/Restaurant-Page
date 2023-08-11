@@ -1,6 +1,7 @@
 import _ from 'lodash';
 import displaymenu from './menu.js';
 import displayContact from './contact.js';
+import displayMission from './ourmission.js';
 
 //Module
 
@@ -118,6 +119,11 @@ tab2.addEventListener('click', function(e) {
 const tab3 = document.createElement("li")
 list.appendChild(tab3)
 tab3.innerText = "Our Mission"
+tab3.addEventListener('click', function(e) {
+    content.innerHTML = '';
+    displayMission();
+
+})
 
 //Restaurant Picture
 const imgcontainer = document.createElement("div")
