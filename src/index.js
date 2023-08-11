@@ -1,7 +1,10 @@
 import _ from 'lodash';
 import displaymenu from './menu.js';
+import displayContact from './contact.js';
 
+//Module
 
+export default function displayHome() {
 // Your CSS as text
 var styles = `
 body {
@@ -107,6 +110,11 @@ tab1.addEventListener('click', function(e) {
 const tab2 = document.createElement("li")
 list.appendChild(tab2)
 tab2.innerText = "Contact"
+tab2.addEventListener('click', function(e) {
+    content.innerHTML = '';
+    displayContact();
+
+})
 const tab3 = document.createElement("li")
 list.appendChild(tab3)
 tab3.innerText = "Our Mission"
@@ -154,3 +162,6 @@ footab3.innerHTML = "Contacts"
 const footab4 = document.createElement("div")
 foot.appendChild(footab4)
 footab4.innerHTML = "Order Online"
+}
+
+displayHome()

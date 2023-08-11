@@ -1,3 +1,6 @@
+import displayHome from './index.js';
+import displayContact from './contact.js';
+
 export default function displaymenu() {
 
     var styles = `
@@ -128,6 +131,11 @@ export default function displaymenu() {
     middle.src = "./FoodaLogo.png"
     middle.classList.add("foodalogo")
     header.appendChild(middle)
+    middle.addEventListener('click', function(e) {
+        content.innerHTML = '';
+        //load up home page here
+        displayHome()
+    })
 
     const list = document.createElement("ul")
     list.classList.add("tabs")
@@ -143,6 +151,11 @@ export default function displaymenu() {
     const tab2 = document.createElement("li")
     list.appendChild(tab2)
     tab2.innerText = "Contact"
+    tab2.addEventListener('click', function(e) {
+        content.innerHTML = '';
+        displayContact();
+    
+    })
     const tab3 = document.createElement("li")
     list.appendChild(tab3)
     tab3.innerText = "Our Mission"
