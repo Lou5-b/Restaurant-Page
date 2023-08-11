@@ -1,4 +1,4 @@
-import displayHome from './index.js';
+import displayHome from './home.js';
 import displaymenu from './menu.js';
 import displayMission from './ourmission.js';
 

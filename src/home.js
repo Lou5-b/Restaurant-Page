@@ -1,8 +1,10 @@
-import _ from 'lodash';
 import displaymenu from './menu.js';
 import displayContact from './contact.js';
 import displayMission from './ourmission.js';
 
+//Module
+
+export default function displayHome() {
 // Your CSS as text
 var styles = `
 body {
@@ -165,3 +167,4 @@ footab3.innerHTML = "Contacts"
 const footab4 = document.createElement("div")
 foot.appendChild(footab4)
 footab4.innerHTML = "Order Online"
+}
